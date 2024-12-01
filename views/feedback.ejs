@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Page title and CSS -->
+   <title>Customer Feedback</title>
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <!-- Main centered container -->
+   <div style="width: 400px; margin: 0 auto; padding-top: 50px;">
+       <h2>Customer Feedback</h2>
+       <!-- Feedback submission form -->
+       <form action="/submit-feedback" method="post">
+           
+           <!-- First name field - prefilled and editable -->
+           <div style="margin-top: 10px;">
+               <label for="firstName">First Name:</label><br>
+               <input type="text" id="firstName" name="firstName" value="<%= firstName %>" required 
+                      style="width: 100%; padding: 8px;">
+           </div>
+
+           <!-- Last name field - prefilled and editable -->
+           <div style="margin-top: 10px;">
+               <label for="lastName">Last Name:</label><br>
+               <input type="text" id="lastName" name="lastName" value="<%= lastName %>" required 
+                      style="width: 100%; padding: 8px;">
+           </div>
+
+           <!-- Email field - prefilled and readonly -->
+           <div style="margin-top: 10px;">
+               <label for="email">Email:</label><br>
+               <input type="email" id="email" name="email" value="<%= email %>" readonly 
+                      style="width: 100%; padding: 8px;">
+           </div>
+
+           <!-- Comments section - required textarea -->
+           <div style="margin-top: 10px;">
+               <label for="comments">Your Comments:</label><br>
+               <textarea id="comments" name="comments" required style="width: 100%; padding: 8px;"></textarea>
+           </div>
+
+           <!-- Submit button - styled with green background -->
+           <div style="margin-top: 20px;">
+               <button type="submit" style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer;">
+                   Submit
+               </button>
+           </div>
+       </form>
+   </div>
+</body>
+</html>

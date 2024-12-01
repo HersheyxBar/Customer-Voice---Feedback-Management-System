@@ -1,0 +1,81 @@
+<!-- Signup form  -->
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Sign Up</title>
+   <link rel="stylesheet" href="/css/style.css">
+   <script>
+       // Password match validation 
+       function validateForm() {
+           const password = document.getElementById('password').value;
+           const confirmPassword = document.getElementById('confirmPassword').value;
+
+           if (password !== confirmPassword) {
+               alert('Passwords do not match. Please try again.');
+               return false;
+           }
+           return true;
+       }
+   </script>
+</head>
+<body>
+   <!-- Centered container -->
+   <div style="width: 400px; margin: 0 auto; padding-top: 50px;">
+       <h2>Sign Up</h2>
+
+       <!-- Signup form with password validation -->
+       <form action="/signup" method="post" onsubmit="return validateForm()">
+           
+           <!-- Personal info fields -->
+           <div style="margin-top: 10px;">
+               <label for="firstName">First Name:</label><br>
+               <input type="text" id="firstName" name="firstName" required 
+                      style="width: 100%; padding: 8px;">
+           </div>
+           
+           <div style="margin-top: 10px;">
+               <label for="lastName">Last Name:</label><br>
+               <input type="text" id="lastName" name="lastName" required 
+                      style="width: 100%; padding: 8px;">
+           </div>
+           
+           <div style="margin-top: 10px;">
+               <label for="email">Email:</label><br>
+               <input type="email" id="email" name="email" required 
+                      style="width: 100%; padding: 8px;">
+           </div>
+           
+           <!-- Password fields -->
+           <div style="margin-top: 10px;">
+               <label for="password">Password:</label><br>
+               <input type="password" id="password" name="password" required 
+                      style="width: 100%; padding: 8px;">
+           </div>
+
+           <div style="margin-top: 10px;">
+               <label for="confirmPassword">Confirm Password:</label><br>
+               <input type="password" id="confirmPassword" name="confirmPassword" required 
+                      style="width: 100%; padding: 8px;">
+           </div>
+           
+           <!-- Additional user preferences -->
+           <div style="margin-top: 10px;">
+               <label for="favSport">Favorite Sport:</label><br>
+               <input type="text" id="favSport" name="favSport" required style="width: 100%; padding: 8px;">
+           </div>
+           <div style="margin-top: 10px;">
+               <label for="favTeam">Favorite Team:</label><br>
+               <input type="text" id="favTeam" name="favTeam" required style="width: 100%; padding: 8px;">
+           </div>
+           
+           <!-- Submit button -->
+           <div style="margin-top: 20px;">
+               <button type="submit" 
+                       style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer;">
+                   Sign Up
+               </button>
+           </div>
+       </form>
+   </div>
+</body>
+</html>

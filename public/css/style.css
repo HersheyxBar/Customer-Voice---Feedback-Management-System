@@ -1,0 +1,18 @@
+/* Styles for the entire webpage */
+body {
+    font-family: Arial, sans-serif; /* Set the font to Arial, with a fallback to sans-serif */
+    background-color: #f9f9f9; /* Set a light gray background color for the page */
+}
+
+/* Styles for all <h2> elements */
+h2 {
+    text-align: center; /* Center the heading text horizontally */
+}
+
+/* Styles for all <form> elements */
+form {
+    border: 1px solid #ddd; /* Add a light gray border around the form */
+    padding: 20px; /* Add padding inside the form for spacing */
+    background: white; /* Set the form background to white */
+    border-radius: 5px; /* Round the corners of the form */
+}

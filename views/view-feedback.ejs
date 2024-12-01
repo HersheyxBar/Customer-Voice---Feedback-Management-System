@@ -1,0 +1,46 @@
+<!-- View customer feedback  -->
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Customer Feedback</title>
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <!-- Main container with increased width for table -->
+   <div style="width: 800px; margin: 0 auto; padding-top: 50px;">
+       <h2>Customer Feedback</h2>
+       
+       <!-- Feedback data table -->
+       <table border="1" style="width: 100%; border-collapse: collapse;">
+           <thead>
+               <tr>
+                   <th>Email</th>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Favorite Sport</th>
+                   <th>Favorite Team</th>
+                   <th>Comments</th>
+               </tr>
+           </thead>
+           <tbody>
+               <!-- Loop through customers array to display feedback -->
+               <% customers.forEach(function(customer) { %>
+                   <tr>
+                       <td><%= customer.email %></td>
+                       <td><%= customer.firstName %></td>
+                       <td><%= customer.lastName %></td>
+                       <td><%= customer.favSport %></td>
+                       <td><%= customer.favTeam %></td>
+                       <td><%= customer.comments %></td>
+                   </tr>
+               <% }); %>
+           </tbody>
+       </table>
+
+       <!-- Return to login button -->
+       <div style="margin-top: 20px;">
+           <a href="/login"><button style="padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer;">Back to Login</button></a>
+       </div>
+   </div>
+</body>
+</html>

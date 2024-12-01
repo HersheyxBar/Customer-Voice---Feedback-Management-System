@@ -1,0 +1,42 @@
+<!-- Main login page -->
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Customer Feedback</title>
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <!-- Centered container div -->
+   <div style="width: 400px; margin: 0 auto; padding-top: 50px;">
+       <h2>Customer Login</h2>
+
+       <!-- Login form -->
+       <form action="/login" method="post">
+           
+           <!-- Email/username field -->
+           <div>
+               <label for="email">User Name:</label><br>
+               <input type="email" id="email" name="email" required 
+                      placeholder="Enter your email" 
+                      style="width: 100%; padding: 8px;">
+           </div>
+           
+           <!-- Password field -->
+           <div style="margin-top: 10px;">
+               <label for="password">Password:</label><br>
+               <input type="password" id="password" name="password" required 
+                      placeholder="Enter your password" 
+                      style="width: 100%; padding: 8px;">
+           </div>
+           
+           <!-- Login button -->
+           <div style="margin-top: 20px;">
+               <button type="submit" 
+                       style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer;">
+                   Login
+               </button>
+           </div>
+       </form>
+   </div>
+</body>
+</html>
